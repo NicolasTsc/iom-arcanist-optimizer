@@ -403,6 +403,8 @@ export interface UnlockBonuses {
   blackHole30: boolean;
   /** Divine Challenge 24 — +4% Arcanist Spell Power. */
   divineChallenge24: boolean;
+  /** Divine Challenge 25 — All Shiny Essence Loot +2. */
+  divineChallenge25: boolean;
   /** Hydra Star level, max 50 — +0.25% Arcanist Spell Power per level. */
   hydraStarLevel: number;
 }
@@ -787,6 +789,7 @@ export interface DerivedBonuses {
   /** The additive rune craft terms from outside the Arcanist. */
   storeRuneCraft: number;
   contractRuneCraft: number;
+  allShinyLoot: number;
 }
 
 export interface ArcanistResult {

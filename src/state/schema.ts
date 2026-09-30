@@ -223,6 +223,7 @@ function coerceExternal(raw: unknown): ExternalBonuses {
       w4GildedStatues: clamp(int(unlocks.w4GildedStatues, 0), UNLOCKS.maxW4GildedStatues),
       blackHole30: bool(unlocks.blackHole30, false),
       divineChallenge24: bool(unlocks.divineChallenge24, false),
+      divineChallenge25: bool(unlocks.divineChallenge25, false),
       hydraStarLevel: clamp(int(unlocks.hydraStarLevel, 0), UNLOCKS.maxHydraStarLevel),
     },
     contractRuneCraftLevel: clamp(
@@ -628,6 +629,8 @@ const FIELD_ORDER: Field[] = [
   ...ORB_CARD_IDS.map(tradedField),
   wizardField('negligibleBar'),
   wizardField('gapBar'),
+  // ---- v9: DC25. Appended, as above. ----
+  unlockField('divineChallenge25'),
 ];
 
 export const PACKED_FIELD_COUNT = FIELD_ORDER.length;

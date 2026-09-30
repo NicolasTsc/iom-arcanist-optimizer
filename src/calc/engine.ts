@@ -139,6 +139,7 @@ function deriveBonuses(input: ArcanistInput): DerivedBonuses {
     contractRuneCraft:
       clampLevel(ext.contractRuneCraftLevel, CONTRACT_RUNE_CRAFT.maxLevel) *
       CONTRACT_RUNE_CRAFT.perLevel,
+    allShinyLoot: unlocks.divineChallenge25 ? UNLOCKS.divineChallenge25AllShinyLoot : 0,
   };
 }
 
@@ -255,16 +256,16 @@ function computeStats(
       (unlocks.straightOuttaYanille ? UNLOCKS.yanilleShiny : 0) +
       (unlocks.arcanistBundle ? UNLOCKS.bundleShiny : 0) +
       derived.petQuestShiny,
-    shinyBonus: BASE_STATS.shinyBonusBase + effects.shinyLoot + effects.allShinyLoot,
+    shinyBonus: BASE_STATS.shinyBonusBase + effects.shinyLoot + effects.allShinyLoot + derived.allShinyLoot,
     superShinyChance:
       cardValue(CARD_SCALES.superShiny, rhinoTier) +
       derived.statueSuperShiny +
       effects.superShinyChance +
       (unlocks.worldQuest29 ? UNLOCKS.worldQuest29SuperShiny : 0),
     superShinyBonus:
-      BASE_STATS.superShinyBonus + effects.superShinyLoot + effects.allShinyLoot,
+      BASE_STATS.superShinyBonus + effects.superShinyLoot + effects.allShinyLoot + derived.allShinyLoot,
     ultraShinyChance: effects.ultraShinyChance + derived.rhinoUltraShiny,
-    ultraShinyBonus: BASE_STATS.ultraShinyBonus + effects.allShinyLoot,
+    ultraShinyBonus: BASE_STATS.ultraShinyBonus + effects.allShinyLoot + derived.allShinyLoot,
     brittleChance:
       effects.brittleChance1 +
       effects.brittleChance2 +

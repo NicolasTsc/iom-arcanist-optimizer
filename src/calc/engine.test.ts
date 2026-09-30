@@ -619,6 +619,17 @@ describe('derived external bonuses', () => {
     input.external.unlocks.w4GildedStatues = 7;
     expect(compute(input).derived.statueSuperShiny).toBe(0);
   });
+
+  it('grants the dc25 bonus', () => {
+    const input = structuredClone(EXAMPLE_INPUT);
+    input.external.unlocks.divineChallenge25 = true;
+
+    const computed = compute(input);
+
+    expect(computed.stats.shinyBonus).toBeCloseTo(6);
+    expect(computed.stats.superShinyBonus).toBeCloseTo(7);
+    expect(computed.stats.ultraShinyBonus).toBeCloseTo(9);
+  });
 });
 
 describe('cost curves', () => {

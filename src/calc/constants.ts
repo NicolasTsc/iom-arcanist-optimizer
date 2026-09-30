@@ -1009,6 +1009,8 @@ export const UNLOCKS = {
   blackHole30SpellPower: 0.1,
   /** Divine Challenge 24. */
   divineChallenge24SpellPower: 0.04,
+  /** Divine Challenge 25. */
+  divineChallenge25AllShinyLoot: 2,
   /** Hydra Star, per level. */
   hydraStarSpellPowerPerLevel: 0.0025,
   maxHydraStarLevel: 50,

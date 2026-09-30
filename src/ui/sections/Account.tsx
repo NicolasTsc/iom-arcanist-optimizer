@@ -331,6 +331,13 @@ export function OtherUnlocks({ input, result, update }: Props) {
           checked={unlocks.divineChallenge24}
           onChange={(v) => set('divineChallenge24', v)}
         />
+        <UnlockRow
+          icon={UNLOCK_ICONS.divineChallenge25}
+          label="Divine Challenge 25"
+          effects={`All Shiny Essence Loot +${UNLOCKS.divineChallenge25AllShinyLoot}`}
+          checked={unlocks.divineChallenge25}
+          onChange={(v) => set('divineChallenge25', v)}
+        />
 
         <Subhead>Contracts</Subhead>
         <LevelRow
